@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <input id="task-input" placeholder="输入任务">
+  <!-- id用于后续通过JS访问该元素 -->
+  <button onclick="addTask()">添加</button>
+  <!-- onclick指定点击按钮的时候调用JS里的addTask()函数-->
+  <ul id="task-list"></ul>
+    <!-- 无序列表 -->
+  <script>
+    function addTask() {
+      const input = document.getElementById("task-input");
+    //获取输入框元素
+      const task = input.value;
+    //   获取输入的内容
+      const li = document.createElement("li");
+    //   创建一个li元素
+      li.textContent = task;
+    //   通过textContext设置输入的task为li文本内容
+      document.getElementById("task-list").appendChild(li);
+    //   通过appendchild将li设为ul无序列表的子元素
+      input.value = ""; // 清空输入框
+    }
+  </script>
+</body>
+</html>
