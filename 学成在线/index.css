@@ -1,0 +1,400 @@
+/* 版心居中 */
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+body {
+    background-color: #f3f5f7;
+}
+.header {
+    height: 100px;
+    background-color: white;
+}
+.header .wrapper {
+    display: flex;
+    padding-top: 29px;
+}
+.logo a {
+    display: block;
+    width: 195px;
+    height: 41px;
+    background-image: url(../images/logo.png);
+    font-size: 0;
+}
+.nav {
+    padding-left: 102px;
+}
+.nav ul {
+    display: flex;
+}
+.nav li {
+    margin-right: 24px;
+}
+.nav li a {
+    display: block;
+    padding: 6px 8px;
+    line-height: 27px;
+    font-size: 19px;
+}
+/* active 默认选择的是首页 */
+.nav li .active,.nav a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+.search {
+    display: flex;
+    width: 412px;
+    height: 40px;
+    background-color: #f3f5f7;
+    border-radius: 20px;
+    margin-left: 64px;
+    padding-left: 19px;
+    padding-right: 12px;
+}
+.search input {
+    /* 除了右侧的内容，剩下的内容全被搜索框占用 */
+    flex: 1;
+    /* 无边框 */
+    border: 0;
+    /* 背景色是透明，即用父级背景色 */
+    background-color: transparent;
+    /* 焦点框为none 不显示边框线条 */
+    outline: none;
+}
+/* ::placeholder 选中修改文字样式 */
+.search input::placeholder {
+    font-size: 14px;
+    color: #999;
+}
+.search a {
+    /* 父级已经设置为flex，a已经变成弹性盒子 */
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/search.png);
+    align-self: center;
+}
+.user {
+    padding-left: 32px;
+    margin-top: 4px;
+}
+.user img {
+    /* 行内块，行内垂直居中用vertical-align：middle */
+    vertical-align: middle;
+    padding-right: 6px;
+}
+.user span {
+    vertical-align: middle;
+    font-size: 16px;
+    color: #666;
+}
+/* banner区域 */
+.banner {
+    height:420px ;
+    background-color: #0092cb;
+}
+.banner .wrapper {
+    height: 420px;
+    background-image: url(../uploads/banner.png);
+    display: flex;
+    justify-content: space-between;
+}
+.banner .wrapper .left {
+    width: 191px;
+    height: 420px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 3px 20px;
+}
+.banner .left a {
+    display: block;
+    height: 46;
+    line-height: 46px;
+    font-size: 16px;
+    color: white;
+    background: url(../images/right.png) no-repeat right center;
+
+}
+.banner .left a:hover {
+    color: #00a4ff;
+    background-image: url(../images/right-hover.png);
+}
+.banner .right {
+    width: 218px;
+    height: 305px;
+    background-color: #209dd5;
+    margin-top: 60px;
+    border-radius: 10px;
+}
+.banner .right h3 {
+    height: 48px;
+    margin-left: 14px;
+    line-height: 48px;
+    font-size: 15px;
+    color: white;
+    font-weight: normal;
+}
+.banner .right .content {
+    height: 257px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 14px;
+}
+.banner .right .content dl {
+    margin-bottom: 12px;
+    border-bottom:1px solid #e0e0e0;
+}
+.banner .right .content dt {
+    margin-bottom: 8px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.banner .right .content dd {
+    margin-bottom: 8px;
+    font-size: 12px;
+
+}
+.banner .right .content dd span {
+    color: #4fc0ff;
+}
+.banner .right .content dd strong {
+    color: #7d7d7d;
+    font-weight: normal;
+}
+.banner .right .content a {
+    display: block;
+    height: 32px;
+    background-color: #00a4ff;
+    margin: 14px 0;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 32px;
+    color: white;
+    text-align: center;
+}
+.recommend .wrapper{
+    height: 60px;
+    margin-top: 11px;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(211,211,211,0.5);
+    padding: 18px 20px;
+    display: flex;
+}
+.recommend h3 {
+    margin-right: 20px;
+    font-size: 18px;
+    color: #00a4ff;
+    font-weight: normal;
+}
+.recommend ul {
+    display: flex;
+    flex: 1;
+}
+.recommend ul li a {
+    font-size: 18px;
+    padding: 0 24px;
+    border-right: 1px solid #e0e0e0;
+}
+.recommend ul li:last-child a {
+    border-right: none;
+}
+.recommend .change {
+    font-size: 16px;
+    color: #00a4ff;
+}
+/* 精品推荐具体内容 */
+.rec .top {
+    height: 45px;
+    display: flex;
+    margin-top: 31px;
+}
+.rec .top h3 {
+    font-size: 21px;
+    line-height: 30px;
+    flex: 1;
+}
+.rec .top a {
+    display: block;
+    width: 76px;
+    height: 20px;
+    color: #a6a6a6;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 5px;
+    background: url(../images/more.png) no-repeat right center;
+}
+.rec .bottom {
+    height: 556px;
+
+}
+.rec .bottom ul {
+    display: flex;
+    height: 556px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.rec .bottom ul li {
+    width: 228px;
+    height: 271px;
+    background-color: white;
+}
+.rec .bottom ul li dl dt {
+    margin: 20px 20px 16px;
+    font-size: 14px;
+    width: 188px;
+    height: 37px;
+    line-height: 20px;
+}
+.rec .bottom ul li dl dd {
+    width: 189px;
+    height: 20px;
+}
+.rec .bottom ul li dl dd span {
+    font-size: 14px;
+    line-height: 20px;
+    color: #fa6400;
+    margin-left: 20px;
+    margin-right: 8px;
+}
+.rec .bottom ul li dl dd strong {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    color: #999;
+}
+.front {
+    height: 431px;
+    margin-top: 32px;
+}
+.front .top {
+    display: flex;
+}
+.front .top h3 {
+    flex:1;
+    width: 147px;
+    height: 30px;
+    font-size: 21px;
+    line-height: 32px;
+    margin-bottom: 15px;
+}
+.front .top ul {
+    display: flex;
+    flex:1;
+    width: 308px;
+    height: 23px;
+    margin: 4px 370px 19px 229px;
+}
+.front .top li a{
+    display: block;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    line-height: 32px;
+    margin-right: 60px;
+}
+.front .top li a:hover {
+    color: #00a4ff;
+}
+.front .top .more {
+    display: block;
+    width: 76px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 4px;
+    margin-bottom: 21px;
+    font-size: 14px;
+    color: #a6a6a6;
+    margin-right: 20px;
+    background: url(../images/more.png) no-repeat right center;
+}
+.front .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.front .bottom .rb ul {
+    display: flex;
+    height: 271px;
+    justify-content: space-between;
+}
+.front .bottom .rb ul li {
+    width: 228px;
+    height: 271px;
+    background-color: white;
+}
+.front .bottom .rb ul li dl dt {
+    margin: 20px 20px 16px;
+    font-size: 14px;
+    width: 188px;
+    height: 37px;
+    line-height: 20px;
+}
+.front .bottom .rb ul li dl dd {
+    width: 189px;
+    height: 20px;
+}
+.front .bottom .rb ul li dl dd span {
+    font-size: 14px;
+    line-height: 20px;
+    color: #fa6400;
+    margin-left: 20px;
+    margin-right: 8px;
+}
+.front .bottom .rb ul li dl dd strong {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    color: #999;
+}
+.end {
+    height: 273px;
+    margin-top: 60px;
+    background-color: white;
+}
+.end .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.end .left {
+    width: 432px;
+    height: 168px;
+    margin-top: 60px;
+    margin-bottom: 65px;
+}
+.end .left p {
+    margin-top: 24px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    line-height: 17px;
+    color: #666;
+}
+.end .left a {
+    display: block;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    font-size: 16px;
+    color: #00a4ff;
+}
+.end .right {
+    width: 516px;
+    height: 151px;
+    margin-top: 60px;
+    margin-bottom: 62px;
+    display: flex;
+    justify-content: space-between;
+}
+.end .right dt a{
+    display: block;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 12px;
+}
+.end .right dd a{
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+}
